@@ -1,3 +1,4 @@
+
 import { CronoComponent } from './pages/crono/crono.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: "casas", component: HousesComponent},
   {path: "cronologia", component: CronoComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
