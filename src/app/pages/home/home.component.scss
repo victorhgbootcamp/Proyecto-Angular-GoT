@@ -1,0 +1,57 @@
+.image{
+    background-image:url(../../../assets/img/image1.png);
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height:100vh;
+     
+  }
+  .title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    font-family: Gameofthrones ;
+    font-size: 150px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: white
+  }
+  .routes{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .active{
+    font-family: Gameofthrones;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+  }
+ .languages{
+    position: fixed;
+    top: 0;
+    right: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 19px;
+ }
+ .uk{
+    padding-left: 20px;
+ }
+ @font-face {
+    font-family: Gameofthrones;
+    src: url(../../../assets/fonts/GameofThrones.ttf);
+  }
