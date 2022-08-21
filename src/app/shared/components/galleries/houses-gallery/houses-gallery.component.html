@@ -1,1 +1,12 @@
-<p>houses-gallery works!</p>
+
+<div *ngFor="let house of houses">
+    <div *ngIf="house.logoURL" class="gallery">
+        <img src="{{house.logoURL}}" alt="{{house.name}}" class="gallery-item"/>
+        <h3>{{house.name}}</h3>
+    </div>
+    <div *ngIf="house.logoURL === undefined" class="gallery">
+        <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}" class="gallery-item"/>
+        <h3>{{house.name}}</h3>
+    </div>
+</div>
+
