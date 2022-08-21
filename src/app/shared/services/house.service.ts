@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class HouseService {
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+    getHouses(){ 
+  return this.http.get("https://api.got.show/api/show/houses")
+  
+}
 }

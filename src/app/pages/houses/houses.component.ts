@@ -1,3 +1,4 @@
+import { HouseService } from './../../shared/services/house.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./houses.component.scss']
 })
 export class HousesComponent implements OnInit {
-
-  constructor() { }
+  
+  houses=[];
+  constructor(private housesService: HouseService) { }
 
   ngOnInit(): void {
-  }
+    this.housesService.getHouses().subscribe((res: any) =>{
+      console.log(res);
+      this.houses = res;
+  })}
 
 }
