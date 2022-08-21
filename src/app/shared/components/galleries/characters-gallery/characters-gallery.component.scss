@@ -1,0 +1,30 @@
+.character-block{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    h2{
+        text-align: center;        
+        color:white;
+        
+    }
+    img{
+        
+        height: 320px;
+        width: 248px;
+        //overflow: hidden;
+        object-fit:cover;
+        
+        
+
+    }
+}
+.character-block__item{
+    
+    margin:10px;
+    
+    
+
+
+}

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -9,7 +11,9 @@ import { CronoComponent } from './pages/crono/crono.component';
 import { CharactersGalleryComponent } from './shared/components/galleries/characters-gallery/characters-gallery.component';
 import { HousesGalleryComponent } from './shared/components/galleries/houses-gallery/houses-gallery.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NoopAnimationsModule,
+    ScrollingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
