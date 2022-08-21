@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'app-characters-gallery',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters-gallery.component.scss']
 })
 export class CharactersGalleryComponent implements OnInit {
-
+  
+  @Input() characters: any = [];
+  imgDefault: Iimage ={src:"https://img.freepik.com/fotos-premium/mandarinas-aisladas-mitad-mandarina-pelada-mandarina-entera-o-fruta-naranja-hojas-verdes-aisladas-sobre-fondo-blanco_95544-241.jpg", alt:"default",}
   constructor() { }
 
   ngOnInit(): void {
   }
 
+}
+export interface Iimage{
+  src:string;
+  alt:string;
 }
