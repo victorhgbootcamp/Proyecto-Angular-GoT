@@ -1,3 +1,4 @@
+import { HouseDetailService } from './../../../shared/services/house-detail.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,15 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HouseDetailComponent implements OnInit {
 
-  //houseDetails=[];
+house: any = {}
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private houseDetailService: HouseDetailService) { }
 
   ngOnInit(): void {
-    //this.route.paramMap.subscribe((params) => {
-      //console.log(params.get("idhouse"))
-    //})
-
-  }
+    this.route.paramMap.subscribe(params => {
+      const nameHouse = params.get('nameHouse');
+      this.houseDetailService.getHouse(nameHouse).subscribe(house =>{
+        this.house = house
+        console.log(house)
+      })
+    })
+      } 
 
 }

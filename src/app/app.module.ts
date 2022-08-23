@@ -13,6 +13,7 @@ import { HousesGalleryComponent } from './shared/components/galleries/houses-gal
 import { HttpClientModule } from '@angular/common/http';
 
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
+import { CharacterDetailComponent } from './pages/characters/character-detail/character-detail.component';
 
 
 @NgModule({
@@ -25,13 +26,13 @@ import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.c
     CharactersGalleryComponent,
     HousesGalleryComponent,
     HouseDetailComponent,
+    CharacterDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NoopAnimationsModule,
-    ScrollingModule,
+    
     
   ],
   providers: [],
