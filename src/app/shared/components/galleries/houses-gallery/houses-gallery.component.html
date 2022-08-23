@@ -1,12 +1,14 @@
 
 <div *ngFor="let house of houses">
     <div *ngIf="house.logoURL" class="gallery">
+       <a routerLink="/casas/{{house.name}}">
         <img src="{{house.logoURL}}" alt="{{house.name}}" class="gallery-item"/>
-        <h3>{{house.name}}</h3>
+        <h3>{{house.name}}</h3></a> 
     </div>
     <div *ngIf="house.logoURL === undefined" class="gallery">
+        <a routerLink="/casas/{{house.name}}">
         <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}" class="gallery-item"/>
-        <h3>{{house.name}}</h3>
+        <h3>{{house.name}}</h3></a>
     </div>
 </div>
 
