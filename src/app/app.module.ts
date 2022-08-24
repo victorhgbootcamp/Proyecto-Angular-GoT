@@ -31,9 +31,7 @@ import { CharacterDetailComponent } from './pages/characters/character-detail/ch
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
