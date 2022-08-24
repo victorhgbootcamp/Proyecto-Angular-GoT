@@ -4,27 +4,38 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: black;
-    h2{
+    
+    h3{
         text-align: center;        
         color:white;
-        
     }
     img{
-        
+        /* position:absolute; */
         height: 320px;
         width: 248px;
         //overflow: hidden;
         object-fit:cover;
-        
-        
-
+    
     }
+    .image-block{
+        position: relative;
+        text-align: center;
+        &:hover{
+            .block-title{
+                opacity:100;
+            }
+        }
+    }
+    
+    .block-title{
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        width:100%;    
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 0;
+    } 
 }
 .character-block__item{
-    
     margin:10px;
-    
-    
-
-
 }
