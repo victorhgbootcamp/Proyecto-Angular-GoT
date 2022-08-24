@@ -1,0 +1,38 @@
+.padre{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Gameofthrones;
+    font-size: 32px;
+    
+img {
+    width: 248px;
+    height: 340px;
+}
+}
+.main{
+    display: flex;
+    width: 100%;
+    span{
+        font-family: Gameofthrones;
+    }
+div{
+    display: flex;
+    flex-direction: column;
+    width: 248px;
+}
+}
+@font-face {
+    font-family: Gameofthrones;
+    src: url(../../../../assets/fonts/GameofThrones.ttf);
+}
