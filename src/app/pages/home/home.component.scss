@@ -1,5 +1,5 @@
 .image{
-    background-image:url(../../../assets/img/image1.png);
+    background-image:url(../../shared/assets/img/image1.png);
     background-size:cover;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,6 @@
     align-items: center;
     margin: 0;
     height:100vh;
-     
   }
   .title{
     display: flex;
@@ -53,5 +52,5 @@
  }
  @font-face {
     font-family: Gameofthrones;
-    src: url(../../../assets/fonts/GameofThrones.ttf);
+    src: url(../../shared/assets/fonts/GameofThrones.ttf);
   }

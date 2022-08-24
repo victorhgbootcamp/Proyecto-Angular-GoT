@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Gameofthrones;
+    src: url(../../../shared/assets/fonts/GameofThrones.ttf);
+  }
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100% !important;
+    height: 1080px;
+    
+}
+.gallery{
+    .gallery-item{
+        width: 267px;
+        height: 320px;
+        margin: 204px 0px 30px 0px;
+    }
+    p{
+        font-size: 36px;
+        font-family: Gameofthrones;
+    }
+}
+.text-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .c-text{
+        width: 248px;
+        margin: 0px 12px 0px 12px;
+        .c-text-font{
+            font-family: Gameofthrones; 
+            font-size: 18px;
+        }
+        div{
+            justify-content: center;
+        }
+    }
+}
+
+.languages{
+    top: 0;
+    right: 150px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 19px;
+}
+.uk{
+    padding-left: 20px;
+}

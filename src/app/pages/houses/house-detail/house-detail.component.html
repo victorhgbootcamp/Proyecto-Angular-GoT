@@ -1,66 +1,65 @@
-<p>house-detail works!</p>
-<p>{{house[0].name}}</p>
-
-<img src="{{house[0].logoURL}}" alt="">
-
 <!--div global-->
 
-<!--<div>-->
-
+<div class="container">
+    <!--menu-->
+<div class="languages">
+    <div>
+        <img src="../../../shared/assets/img/image1.png" alt="">
+    </div>
+    <div class="uk" >
+        <img src="../../../shared/assets/img/spain 1.png" alt="">
+    </div>
+</div>
+   
     <!--div de foto y nombre de la casa-->
-        <!--<div>
-            <div *ngIf="house.logoURL" class="gallery">
-                <img src="{{house.logoURL}}" alt="{{house.name}}" class="gallery-item"/>
-                <h3>{{house.name}}</h3>
+        <div>
+            <div *ngIf="house[0].logoURL" class="gallery">
+                <img src="{{house[0].logoURL}}" alt="{{house[0].name}}" class="gallery-item"/>
+                <p>{{house[0].name}}</p>
             </div>
-            <div *ngIf="house.logoURL === undefined" class="gallery">
-                <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}" class="gallery-item"/>
-                <h3>{{house.name}}</h3>
-        </div>-->
+            <div *ngIf="house[0].logoURL === undefined" class="gallery">
+                <!--<img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}" class="gallery-item"/>-->
+                <p>{{house[0].name}}</p>
+        </div>
     
     <!--div de detalles-->
     
-        <!--<div>-->
+        <div class="text-container">
     <!--lema-->
-            <!--<div>
-                <h4>LEMA</h4>
-                <div *ngIf="house.words"><p>{{house.words}}</p></div>-->
-                <!--<div *ngIf="!house.words"><p>{{houseDefault.words}}</p></div>-->
-                <!--<div *ngIf="!house.words"><p>Esta casa no tiene lema conocido.</p></div>-->
+            <div class="c-text">
+                <p class="c-text-font">LEMA</p>
+                <div *ngIf="house[0].words" class=""><p>{{house[0].words}}</p></div>
+                <div *ngIf="!house[0].words"><p>Esta casa no tiene lema conocido.</p></div>
+            </div>
     <!--sede-->
-            <!--<div>
-                <h4>SEDE</h4>
-                <div *ngIf="house.seat"><p>{{house.seat}}</p></div>-->
-                <!--<div *ngIf="!house.seat"><p>{{houseDefault.seat}}</p></div>-->
-                <!--<div *ngIf="!house.seat"><p>Esta casa no tiene sede conocida.</p></div>
-
-            </div>-->
+            <div class="c-text">
+                <p class="c-text-font">SEDE</p>
+                <div *ngIf="house[0].seat"><p>{{house[0].seat}}</p></div>
+                <div *ngIf="!house[0].seat"><p>Esta casa no tiene sede conocida.</p></div>
+            </div>
     <!--alianzas-->
-            <!--<div>
-                <h4>ALIANZAS</h4>
-                <div *ngIf="house.allegiance"><p>{{house.allegiance}}</p></div>-->
-                <!--<div *ngIf="!house.allegiance"><p>{{houseDefault.allegiance}}</p></div>-->
-                <!--<div *ngIf="!house.allegiance"><p>Esta casa no tiene alianzas conocidas.</p></div>
-
-            </div>-->
+            <div class="c-text">
+                <p class="c-text-font">ALIANZAS</p>
+                <div *ngIf="house[0].allegiance"><p>{{house[0].allegiance}}</p></div>
+                <div *ngIf="!house[0].allegiance === undefined"><p>Esta casa no tiene alianzas conocidas.</p></div>
+                <div *ngIf="!house[0].allegiance"><p>Esta casa no tiene alianzas conocidas.</p></div>
+            </div>
     <!--religiones-->
-            <!--<div>
-                <h4>RELIGIONES</h4>
-                <div *ngIf="house.religion"><p>{{house.religion}}</p></div>-->
-                <!--<div *ngIf="!house.religion"><p>{{houseDefault.religion}}</p></div>-->
-                <!--<div *ngIf="!house.religion"><p>Esta casa no tiene religiones conocidas.</p></div>
-            </div>-->
+            <div class="c-text">
+                <p class="c-text-font">RELIGIONES</p>
+                <div *ngIf="house[0].religion"><p>{{house[0].religion}}</p></div>
+                <div *ngIf="!house[0].religion"><p>Esta casa no tiene religiones conocidas.</p></div>
+            </div>
     <!--fecha fundacion-->
-            <!--<div>
-                <h4>FUNDACION</h4>
-                <div *ngIf="house.createdAt"><p>{{house.createdAt}}</p></div>-->
-                <!--<div *ngIf="!house.createdAt"><p>{{houseDefault.createdAt}}</p></div>-->
-                <!--<div *ngIf="!house.createdAt"><p>Esta casa no tiene fecha de fundación conocida.</p></div>
-
+            <div class="c-text">
+                <p class="c-text-font">FUNDACION</p>
+                <div *ngIf="house[0].createdAt"><p>{{house[0].createdAt}}</p></div>
+                <div *ngIf="!house[0].createdAt"><p>Esta casa no tiene fecha de fundación conocida.</p></div>
             </div>
         </div>
-    </div>-->
+    </div>
 
-    
+
+   
     
     
