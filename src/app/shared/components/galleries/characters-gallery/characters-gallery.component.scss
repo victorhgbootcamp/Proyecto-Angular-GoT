@@ -4,6 +4,7 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: black;
+    /* height: 100vh; */
     h3{
         text-align: center;        
         color:white;
@@ -34,4 +35,46 @@
 }
 .character-block__item{
     margin:10px;
+}
+
+.container {
+    border-radius: 6px;
+    min-width: 200px;
+    height: 80vh;
+    width: 100%;
+    border: 1px dotted;
+    overflow: hidden;
+    //background-color: black;
+  }
+/* .ngx-simplebar {
+
+    height: 20vh;
+  
+  } */
+
+/* ::ng-deep .simplebar-scrollbar::before {
+
+    background-color: #fff!important;
+  
+  } */
+
+
+/* main {
+    height: 100vh;
+    overflow: hidden;
+} */
+
+.scroll{
+    height:100vh;
+
+} 
+
+.container-padre{
+    height: 100vh;
+    display: block;
+    align-items: center;
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    margin-right:40px;
 }

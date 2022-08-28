@@ -34,7 +34,20 @@
 // @include mat.all-component-themes($project-GoT-theme);
 
 /* You can add global styles to this file, and also import other style files */
+@import '~simplebar/dist/simplebar.css';
 
 body{
     margin:0;
+    background-color:black;
+}
+.simplebar-track.simplebar-vertical{
+    background-color: #D3D3D3;
+    margin-right: 5px;
+    width:8px!important;
+    border-radius: 6px;
+    height:80%
+}
+
+.simplebar-content{
+    padding-right:40px;
 }

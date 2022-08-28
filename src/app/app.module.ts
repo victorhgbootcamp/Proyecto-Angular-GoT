@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
 import { CharacterDetailComponent } from './pages/characters/character-detail/character-detail.component';
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CharacterDetailComponent } from './pages/characters/character-detail/ch
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SimplebarAngularModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

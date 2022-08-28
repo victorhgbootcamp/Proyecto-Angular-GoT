@@ -1,1 +1,23 @@
-<p>crono works!</p>
+
+<div class="body">
+    <div>
+        <button (click)="ordenar()">Ordenar</button>
+    </div>
+
+
+    <div class="timeline">
+
+        <div *ngFor="let item of characters" class="timeline__item">
+            <div class="" *ngIf="item.age.age">
+                <p>{{item.age.age}}</p>
+                <p>{{item.name}}</p>
+                <img width="100px" src="{{item.image}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
