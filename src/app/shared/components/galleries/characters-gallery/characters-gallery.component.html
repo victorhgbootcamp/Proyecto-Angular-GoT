@@ -1,6 +1,9 @@
-
-<div class="character-block">
+<div class="container-padre">
+<div class="container">
+<ngx-simplebar class="scroll" data-simplebar [options]="options">
+    <div class="character-block">
     <div *ngFor="let character of characters">
+        
         <div class="character-block__item">
             <div *ngIf="character.image" class="image-block">
                 <a routerLink="/personajes/{{character.name}}">
@@ -22,6 +25,92 @@
 
     </div>
 </div>
+</ngx-simplebar>
+</div>
+</div>
+
+
+
+<!-- <div class="container">
+    <ngx-simplebar class="scroll" data-simplebar [options]="options">
+      <div *ngFor="let character of characters">
+        {{character.name}}
+          <div>
+          {{number.name}}
+           <h2>{{number.age}}</h2>
+        </div> 
+      </div>
+    </ngx-simplebar>
+</div> -->
+
+<!-- <main>
+<ngx-simplebar [options]="options" >
+<div class="character-block">
+    
+        <div *ngFor="let number of numbers">
+            <div *ngFor="let character of characters">
+                <div class="character-block__item">
+                    <div *ngIf="character.image" class="image-block">
+                        <a routerLink="/personajes/{{character.name}}">
+                            <div class="block-title">
+                                <h3>{{character.name}}</h3>
+                            </div> 
+                            <img src="{{character.image}}" alt="{{character.name}}"/>
+                        </a> 
+                    </div>
+                    <div *ngIf="!character.image" class="image-block">
+                        <a routerLink="/personajes/{{character.name}}">
+                            <div class="block-title">
+                                <h3>{{character.name}}</h3>
+                            </div>
+                            <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+</ngx-simplebar>
+</main>
+ -->
+
+ 
+
+<!-- <div class="container">
+<ngx-simplebar [options]="options">     
+    <div class="character-block">
+        
+            <div *ngFor="let character of characters">
+                <div class="character-block__item">
+                    <div *ngIf="character.image" class="image-block">
+                        <a routerLink="/personajes/{{character.name}}">
+                            <div class="block-title">
+                                <h3>{{character.name}}</h3>
+                            </div> 
+                            <img src="{{character.image}}" alt="{{character.name}}"/>
+                        </a> 
+                    </div>
+                     <div *ngIf="!character.image" class="image-block">
+                        <a routerLink="/personajes/{{character.name}}">
+                            <div class="block-title">
+                                <h3>{{character.name}}</h3>
+                            </div>
+                            <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}"/>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+            </div>
+</ngx-simplebar>
+</div> -->
+    
+
+
+
+
+
+
 
     
     

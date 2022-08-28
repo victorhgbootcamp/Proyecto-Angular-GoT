@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class CharacterDetailComponent implements OnInit {
 
   character: any = {}
+  options = {autoHide:false};
+
   constructor(private route: ActivatedRoute, private characterDetailService: CharacterDetailService) { }
 
   ngOnInit(): void {

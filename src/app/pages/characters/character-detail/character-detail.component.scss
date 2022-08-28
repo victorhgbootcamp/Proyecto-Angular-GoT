@@ -1,5 +1,5 @@
 .padre{
-    background-color: black;
+    //background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
@@ -22,17 +22,29 @@ img {
 }
 .main{
     display: flex;
-    width: 100%;
+    //width: 100%;
+    flex-wrap: wrap;
+    margin:20px;
+    align-items: center;
+    justify-content: center;
     span{
         font-family: Gameofthrones;
     }
-div{
+    &__item{
+        margin:15px;
+        display:block;
+        height:100px;
+        width: 150px;
+        padding:20px;
+        
+    }
+/* div{
     display: flex;
     flex-direction: column;
     width: 248px;
+} */
 }
-}
-@font-face {
+/* @font-face {
     font-family: Gameofthrones;
     src: url(../../../../assets/fonts/GameofThrones.ttf);
-}
+} */

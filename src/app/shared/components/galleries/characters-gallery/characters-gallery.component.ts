@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 @Component({
   selector: 'app-characters-gallery',
@@ -8,7 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CharactersGalleryComponent implements OnInit {
   
   @Input() characters: any = [];
+  numbers = Array(100).fill(0);
+  options = {autoHide:false};
   imgDefault: Iimage ={src:"https://img.freepik.com/fotos-premium/mandarinas-aisladas-mitad-mandarina-pelada-mandarina-entera-o-fruta-naranja-hojas-verdes-aisladas-sobre-fondo-blanco_95544-241.jpg", alt:"default",}
+  
+  
   constructor() { }
 
   ngOnInit(): void {

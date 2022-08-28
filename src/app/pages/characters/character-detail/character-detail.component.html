@@ -1,43 +1,44 @@
 <div class="padre">
+  <div class="card">
+    <img src="{{ character.image }}" alt="" />
+    <p>{{ character.name }}</p>
+  </div>
 
+  <div class="main">
+    <div class="main__item">
+      <span>CASA</span>
+    </div>
 
-<div class="card">
-    <img src="{{character.image}}" alt="">
-    <p>{{character.name}}</p>
-</div>
+    <div class="main__item">
+      <span>ALIANZAS</span>
+      <p *ngFor="let item of character.allegiances">{{ item }}</p>
+      <!-- <p>{{character.allegiances}}</p> -->
+    </div>
 
-<div class="main">
+    <div class="main__item">
+      <span>APARICIONES</span>
+      <ngx-simplebar style="height: 100px" data-simplebar [options]="options">
+        <p *ngFor="let item of character.appearances">{{ item }}</p>
+        <!-- <p>{{character.appearances}}</p> -->
+      </ngx-simplebar>
+    </div>
 
-<div>
-<span>CASA</span>
-</div>
+    <div class="main__item">
+      <span>PADRE</span>
+      <p>{{ character.father }}</p>
+    </div>
 
-<div>
-    <span>ALIANZAS</span>
-    <p>{{character.allegiances}}</p>
-</div>
+    <div class="main__item">
+      <span>DESCENDIENTES</span>
+      <p>{{ character.siblings }}</p>
+    </div>
 
-<div>
-    <span>APARICIONES</span>
-    <p>{{character.appearances}}</p>
-</div>
-
-<div>
-    <span>PADRE</span>
-    <p>{{character.father}}</p>
-</div>
-
-<div>
-    <span>DESCENDIENTES</span>
-    <p>{{character.siblings}}</p>
-</div>
-
-<div>
-    <span>TITULOS</span>
-    <p>{{character.titles}}</p>
-</div>
-
-
-</div>
-
+    <div class="main__item">
+      <span>TITULOS</span>
+      <ngx-simplebar style="height: 100px" data-simplebar [options]="options">
+        <p *ngFor="let item of character.titles">{{ item }}</p>
+        <!-- <p>{{character.title}}</p> -->
+      </ngx-simplebar>
+    </div>
+  </div>
 </div>
