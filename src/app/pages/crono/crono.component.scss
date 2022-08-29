@@ -91,6 +91,17 @@ $breakpoint: 200px;
   border-radius: 50px;
 }
 
+//menu iconos
+.icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: 95%;
+  &__item{
+      margin: 10px 10px;
+  }
+}
+
 //menu
 .routes{
   background-color: black;
@@ -102,22 +113,38 @@ $breakpoint: 200px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  
+  p{
+    font-family: Gameofthrones;
+    color: white;
+    font-size: 36px;
+    text-decoration:solid;
+  }
+  & .active{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 600px){
+  padding: 10px;
+  div{
+    margin: 2px 5px;
+  }
+    p{
+    font-size: 20px;
+    } 
+  }
 }
-.active{
 
-  font-family: Gameofthrones;
-  color: white;
-  font-size: 36px;
-  text-decoration:solid;
-}
 @font-face {
   font-family: Gameofthrones;
   src: url(../../shared/assets/fonts/GameofThrones.ttf)
 }
 .scoll_bar{
   margin: 10px 50px 0px 0px;
-  height: 98vh;
+  height: 89vh;
+  @media screen and (max-width: 600px){
+    height: 75vh;
+    margin: 10px 15px 0px 0px;
+
+  }
 }
 
 
