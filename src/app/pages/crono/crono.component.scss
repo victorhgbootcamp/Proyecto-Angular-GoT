@@ -1,27 +1,34 @@
-$color: white;
-$lineColor: white;
-$fontColor: white;
 $breakpoint: 700px;
 * {
   box-sizing: border-box;
 }
-.body {
+.container {
   background-color: black;
-  color: $fontColor;
-  padding: 1rem;
-  font-family: 'Playfair Display', serif;
+  color: white;
 }
-.timeline {
-  position: relative;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1300px;
+.container_button{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.button{
+  background-color: black;
+  color:white;
+  padding:20px;
+  border: solid 3px white;
+  border-radius: 50px;
+}
 
+.container-timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
   &:before {
     content: '';
     position: absolute;
     height: 100%;
-    border: 1px solid $lineColor;
+    border: 2px solid white;
     right: 40px;
     top: 0;
   }
@@ -38,45 +45,75 @@ $breakpoint: 700px;
     }
   }
 }
-.timeline__item {
-  padding: 1rem;
-  border: 2px solid $lineColor;
-  border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
-  border-image-slice: 1;
+.container-timeline__item {
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-top: 2px solid white;
   position: relative;
-  margin: 1rem 3rem 1rem 1rem;
   clear: both;
+  height: 100px;
   &:after,
   &:before {
     content: '';
     position: absolute;
   }
-  
-  &:before {
-    right: -10px;
-    top: calc(50% - 5px);
-    border-style: solid;
-    border-color: $lineColor $lineColor transparent transparent;
-    border-width: 10px;
-    transform: rotate(45deg);
-  }
-
   @media screen and (min-width: $breakpoint) {
-    width: 44%;
+    width: 48%;
+    height: 100px;
     margin: 1rem;
-    
     &:nth-of-type(2n) {
       float: right;
       margin: 1rem;
-      border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
       border-image-slice: 1;
-      &:before {
-        right: auto;
-        left: -10px;
-      border-color:transparent transparent $lineColor $lineColor;
-      }
+       &:before {
+         right: auto;
+         left: -10px;
+       }
     }
   }
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Gameofthrones;
+}
+.gallery_item{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+//menu
+.routes{
+  background-color: black;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.active{
+
+  font-family: Gameofthrones;
+  color: white;
+  font-size: 36px;
+  text-decoration:solid;
+}
+@font-face {
+  font-family: Gameofthrones;
+  src: url(../../shared/assets/fonts/GameofThrones.ttf)
+}
+.scoll_bar{
+  margin: 10px 50px 0px 0px;
+  height: 98vh;
 }
 
 

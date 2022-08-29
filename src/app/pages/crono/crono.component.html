@@ -1,21 +1,33 @@
+<!--menu top-->
 
-<div class="body">
-    <div>
-        <button (click)="ordenar()">Ordenar</button>
+<!--cronologia-->
+<div class="container">
+    <ngx-simplebar  data-simplebar [options]="options" class="scoll_bar">
+    
+        <div class="container_button">
+        <button (click)="ordenar()" class="button">O</button>
     </div>
 
-
-    <div class="timeline">
-
-        <div *ngFor="let item of characters" class="timeline__item">
-            <div class="" *ngIf="item.age.age">
-                <p>{{item.age.age}}</p>
-                <p>{{item.name}}</p>
-                <img width="100px" src="{{item.image}}" alt="">
+    <div class="container-timeline">
+        <div *ngFor="let item of characters" class="container-timeline__item">
+            <div class="gallery" *ngIf="item.age.age">
+                <div><p>{{item.age.age}}</p></div>
+                <div><p>{{item.name}}</p></div>
+                <div class="gallery_item"><img width="100px" src="{{item.image}}" alt=""></div>
             </div>
         </div>
     </div>
+
+    </ngx-simplebar> 
 </div>
+
+
+<!--menu-->
+<div class="routes">
+    <div><a class="active" routerLink="/personajes" routerLinkActive="active">Personajes</a></div>
+    <div><a class="active" routerLink="/casas" routerLinkActive="active">Casas</a></div>
+    <div><a class="active" routerLink="/cronologia" routerLinkActive="active">Cronologia</a></div>
+</div> 
 
 
 
