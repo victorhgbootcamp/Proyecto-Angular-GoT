@@ -1,4 +1,4 @@
-$breakpoint: 700px;
+$breakpoint: 200px;
 * {
   box-sizing: border-box;
 }
@@ -71,6 +71,10 @@ $breakpoint: 700px;
          left: -10px;
        }
     }
+  }
+  @media screen and (max-width: 600px){
+    width: 44%;
+
   }
 }
 .gallery{
