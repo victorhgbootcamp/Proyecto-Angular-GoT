@@ -1,27 +1,70 @@
-
-<div *ngFor="let house of houses">
-    <div *ngIf="house.logoURL" class="gallery">
-       <a routerLink="/casas/{{house.name}}">
-        <img src="{{house.logoURL}}" alt="{{house.name}}" class="gallery-item"/>
-        <h3>{{house.name}}</h3></a> 
+<div class="nav-block">
+  <div class="input-block">
+    <input
+      type="text"
+      name="filterHouse"
+      placeholder="Buscar..."
+      [(ngModel)]="filterHouse"
+    />
+  </div>
+  <div class="icons">
+    <div routerLink="/" class="icons__item">
+      <img
+        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png"
+        alt=""
+      />
     </div>
-    <div *ngIf="house.logoURL === undefined" class="gallery">
-        <a routerLink="/casas/{{house.name}}">
-        <img src="{{imgDefault.src}}" alt="{{imgDefault.alt}}" class="gallery-item"/>
-        <h3>{{house.name}}</h3></a>
+    <div class="icons__item">
+      <img
+        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/spain_1_evuqwb.png"
+        alt=""
+      />
     </div>
+    <div class="icons__item">
+      <img
+        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/united-kingdom_1_dlxqmz.png"
+        alt=""
+      />
+    </div>
+  </div>
 </div>
 
+<div *ngFor="let house of houses | buscadorHouses: filterHouse">
+  <div *ngIf="house.logoURL" class="gallery">
+    <a routerLink="/casas/{{ house.name }}">
+      <img
+        src="{{ house.logoURL }}"
+        alt="{{ house.name }}"
+        class="gallery-item"
+      />
+      <h3>{{ house.name }}</h3></a
+    >
+  </div>
+  <div *ngIf="house.logoURL === undefined" class="gallery">
+    <a routerLink="/casas/{{ house.name }}">
+      <img
+        src="{{ imgDefault.src }}"
+        alt="{{ imgDefault.alt }}"
+        class="gallery-item"
+      />
+      <h3>{{ house.name }}</h3></a
+    >
+  </div>
+</div>
 
 <!--menu-->
 <div class="routes">
-    <div>
-        <a class="active" routerLink="/personajes" routerLinkActive="active">Personajes</a>
-    </div>
-    <div>
-        <a class="active" routerLink="/casas" routerLinkActive="active">Casas</a>
-    </div>
-    <div>
-        <a class="active" routerLink="/cronologia" routerLinkActive="active">Cronologia</a>
-    </div>
-</div> 
+  <div>
+    <a class="active" routerLink="/personajes" routerLinkActive="active"
+      >Personajes</a
+    >
+  </div>
+  <div>
+    <a class="active" routerLink="/casas" routerLinkActive="active">Casas</a>
+  </div>
+  <div>
+    <a class="active" routerLink="/cronologia" routerLinkActive="active"
+      >Cronologia</a
+    >
+  </div>
+</div>
