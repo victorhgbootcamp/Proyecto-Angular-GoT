@@ -1,41 +1,46 @@
-<div class="padre">
-  <div class="card">
-    <img src="{{ character.image }}" alt="" />
-    <p>{{ character.name }}</p>
+<div class="character-details-container">
+  <div class="character-details-card">
+    <img src="{{character.image}}" alt="" />
+    <h2>{{ character.name }}</h2>
   </div>
 
-  <div class="main">
-    <div class="main__item">
-      <span>CASA</span>
+  <div class="character-details-info">
+    <div class="character-details-info__item">
+      <h3>CASA</h3>
+      <img src="{{house[0].logoURL}}" alt="{{character.house}}"/>
     </div>
 
-    <div class="main__item">
-      <span>ALIANZAS</span>
+    <div class="character-details-info__item">
+    <h3>ALIANZAS</h3>
       <p *ngFor="let item of character.allegiances">{{ item }}</p>
       <!-- <p>{{character.allegiances}}</p> -->
     </div>
 
-    <div class="main__item">
-      <span>APARICIONES</span>
-      <ngx-simplebar style="height: 100px" data-simplebar [options]="options">
+    <div class="character-details-info__item">
+      <h3>APARICIONES</h3>
+      <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.appearances">{{ item }}</p>
         <!-- <p>{{character.appearances}}</p> -->
       </ngx-simplebar>
     </div>
 
-    <div class="main__item">
-      <span>PADRE</span>
+    <div class="character-details-info__item">
+      <h3>PADRE</h3>
       <p>{{ character.father }}</p>
     </div>
 
-    <div class="main__item">
-      <span>DESCENDIENTES</span>
-      <p>{{ character.siblings }}</p>
+    <div class="character-details-info__item">
+      <h3>DESCENDIENTES</h3>
+      <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
+        <p *ngFor="let item of character.siblings">{{ item }}</p>
+        <!-- <p>{{character.appearances}}</p> -->
+      </ngx-simplebar>
+      <!-- <p>{{ character.siblings }}</p> -->
     </div>
 
-    <div class="main__item">
-      <span>TITULOS</span>
-      <ngx-simplebar style="height: 100px" data-simplebar [options]="options">
+    <div class="character-details-info__item">
+      <h3>TITULOS  </h3>
+      <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.titles">{{ item }}</p>
         <!-- <p>{{character.title}}</p> -->
       </ngx-simplebar>

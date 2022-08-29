@@ -10,6 +10,8 @@ export class CronoComponent implements OnInit {
 
 characters: any = [];
 sortCharacters:any=[];
+options = {autoHide:false};
+
 
   constructor(private characterService: CharacterService) { }
 

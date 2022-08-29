@@ -24,6 +24,7 @@
     font-size: 36px;
     text-decoration: none;
   }
+
   .input-block{
     display: flex;
     padding-top: 30px;
@@ -59,3 +60,9 @@
         margin: 0px 10px;
     }
 }
+
+  @font-face {
+    font-family: Gameofthrones;
+    src: url(../../../assets/fonts/GameofThrones.ttf);
+  }
+

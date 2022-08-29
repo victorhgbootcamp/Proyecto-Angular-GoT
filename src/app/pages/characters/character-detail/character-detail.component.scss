@@ -1,3 +1,74 @@
+.character-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:30px;
+}
+.character-details-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 320px;
+    }
+    h2{
+        color:white;
+        text-align: center;
+    }
+    
+}
+.character-details-info{
+    display:flex;
+    //width: 100%;
+    margin:20px;
+    justify-content: center;
+    align-items: center;
+    &__item{
+        
+        justify-content: center;
+        align-items: center;
+        margin:15px;
+        padding:20px;
+        flex-wrap: wrap;
+        height: 170px;
+        //width: 200px;
+        img{
+            width:160px;
+            text-align: center;
+        }
+        h3{
+            margin:0px 10px 0px 10px;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    h3{
+        color:white;
+        text-align: center;
+        padding:10px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .character-details-info{
+        flex-direction: column;
+        margin:5px;
+        justify-content: center;
+        &__item{
+            margin-bottom:15px;
+        }
+    }
+}
+.scroll-character-details{
+    text-align: center;
+    box-sizing: content-box;
+    height:100px;
+}
+
+/* 
 .padre{
     //background-color: black;
     color: white;
@@ -38,12 +109,15 @@ img {
         padding:20px;
         
     }
+}
+
+ */
+
 /* div{
     display: flex;
     flex-direction: column;
     width: 248px;
 } */
-}
 /* @font-face {
     font-family: Gameofthrones;
     src: url(../../../../assets/fonts/GameofThrones.ttf);
