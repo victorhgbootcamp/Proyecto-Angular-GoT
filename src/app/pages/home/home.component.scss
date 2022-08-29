@@ -1,5 +1,5 @@
 .image{
-    background-image:url(../../shared/assets/img/image1.png);
+    background-image:url(https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/image_1_hiklo7.png);
     background-size:cover;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,8 @@
     color: white
   }
   .routes{
+    display: flex;
+    flex-wrap: wrap;
     position:fixed;
     bottom: 0;
     width: 100%;
@@ -53,4 +55,18 @@
  @font-face {
     font-family: Gameofthrones;
     src: url(../../shared/assets/fonts/GameofThrones.ttf);
+
+  }
+  @media only screen and (max-width: 768px) {
+    .title{
+      font-size: 60px;
+      text-align: center;
+      padding: 10px;
+    }
+    .languages{
+      // left: 50%;
+      right: 0%;
+      display: flex;
+      justify-content: center;
+    }
   }

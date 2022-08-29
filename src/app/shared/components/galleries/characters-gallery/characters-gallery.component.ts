@@ -15,7 +15,7 @@ export class CharactersGalleryComponent implements OnInit {
   
   
   constructor() { }
-
+  filterCharacter = '';
   ngOnInit(): void {
   }
 

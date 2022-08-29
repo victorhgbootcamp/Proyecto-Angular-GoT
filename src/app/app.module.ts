@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
 import { CharacterDetailComponent } from './pages/characters/character-detail/character-detail.component';
 import { SimplebarAngularModule } from 'simplebar-angular';
+import { BuscadorPipe } from './pipes/buscador.pipe';
+import { FormsModule } from '@angular/forms';
+import { BuscadorHousesPipe } from './pipes/buscador-houses.pipe';
 
 
 @NgModule({
@@ -28,12 +31,15 @@ import { SimplebarAngularModule } from 'simplebar-angular';
     HousesGalleryComponent,
     HouseDetailComponent,
     CharacterDetailComponent,
+    BuscadorPipe,
+    BuscadorHousesPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SimplebarAngularModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
