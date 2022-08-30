@@ -1,3 +1,4 @@
+<div>
 <div class="nav-block">
   <div class="input-block">
     <input
@@ -7,7 +8,8 @@
       [(ngModel)]="filterHouse"
     />
   </div>
-  <div class="icons">
+  <app-translation></app-translation>
+  <!-- <div class="icons">
     <div routerLink="/" class="icons__item">
       <img
         src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png"
@@ -26,45 +28,55 @@
         alt=""
       />
     </div>
-  </div>
+  </div> -->
+</div>
+</div>
+<div class="container-padre">
+<div class="container">
+  <ngx-simplebar class="scroll" data-simplebar [options]="options">
+    <div class="house-block">
+      <div *ngFor="let house of houses | buscadorHouses: filterHouse">
+        <div *ngIf="house.logoURL" class="house-block__item">
+          <a routerLink="/casas/{{ house.name }}">
+            <img
+              src="{{ house.logoURL }}"
+              alt="{{ house.name }}" class="house-block__img"
+              
+            />
+            <h3>{{ house.name }}</h3>
+          </a>
+        </div>
+        <div *ngIf="house.logoURL === undefined" class="house-block__item">
+          <a routerLink="/casas/{{ house.name }}">
+            <img
+              src="{{ imgDefault.src }}"
+              alt="{{ imgDefault.alt }}" class="house-block__img"
+              
+            />
+            <h3>{{ house.name }}</h3>
+          </a
+          >
+        </div>
+      </div>
+    </div>
+  </ngx-simplebar>
+</div>
 </div>
 
-<div *ngFor="let house of houses | buscadorHouses: filterHouse">
-  <div *ngIf="house.logoURL" class="gallery">
-    <a routerLink="/casas/{{ house.name }}">
-      <img
-        src="{{ house.logoURL }}"
-        alt="{{ house.name }}"
-        class="gallery-item"
-      />
-      <h3>{{ house.name }}</h3></a
-    >
-  </div>
-  <div *ngIf="house.logoURL === undefined" class="gallery">
-    <a routerLink="/casas/{{ house.name }}">
-      <img
-        src="{{ imgDefault.src }}"
-        alt="{{ imgDefault.alt }}"
-        class="gallery-item"
-      />
-      <h3>{{ house.name }}</h3></a
-    >
-  </div>
-</div>
 
 <!--menu-->
 <div class="routes">
   <div>
     <a class="active" routerLink="/personajes" routerLinkActive="active"
-      >Personajes</a
+      >{{"PERSONAJES" | translate}}</a
     >
   </div>
   <div>
-    <a class="active" routerLink="/casas" routerLinkActive="active">Casas</a>
+    <a class="active" routerLink="/casas" routerLinkActive="active">{{"CASAS" | translate}}</a>
   </div>
   <div>
     <a class="active" routerLink="/cronologia" routerLinkActive="active"
-      >Cronologia</a
+      >{{"CRONOLOGIA" | translate}}</a
     >
   </div>
 </div>

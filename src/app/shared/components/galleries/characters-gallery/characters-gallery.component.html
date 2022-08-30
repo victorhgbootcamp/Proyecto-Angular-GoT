@@ -7,7 +7,8 @@
       [(ngModel)]="filterCharacter"
     />
   </div>
-  <div class="icons">
+  <app-translation></app-translation>
+  <!-- <div class="icons">
     <div routerLink="/" class="icons__item">
       <img
         src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png"
@@ -26,7 +27,7 @@
         alt=""
       />
     </div>
-  </div>
+  </div> -->
 </div>
 
 <div class="container-padre">
@@ -55,5 +56,22 @@
         </div>
       </div>
     </ngx-simplebar>
+  </div>
+</div>
+
+<!--menu-->
+<div class="routes">
+  <div>
+    <a class="active" routerLink="/personajes" routerLinkActive="active"
+      >{{"PERSONAJES" | translate}}</a
+    >
+  </div>
+  <div>
+    <a class="active" routerLink="/casas" routerLinkActive="active">{{"CASAS" | translate}}</a>
+  </div>
+  <div>
+    <a class="active" routerLink="/cronologia" routerLinkActive="active"
+      >{{"CRONOLOGIA" | translate}}</a
+    >
   </div>
 </div>

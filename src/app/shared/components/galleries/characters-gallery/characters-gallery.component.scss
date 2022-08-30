@@ -114,3 +114,25 @@
         margin: 0px 10px;
     }
 }
+
+//menu
+.routes{
+    background-color: black;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .active{
+    font-family: Gameofthrones;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+  }
+
+
+
