@@ -1,3 +1,4 @@
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
@@ -10,7 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CronoComponent } from './pages/crono/crono.component';
 import { CharactersGalleryComponent } from './shared/components/galleries/characters-gallery/characters-gallery.component';
 import { HousesGalleryComponent } from './shared/components/galleries/houses-gallery/houses-gallery.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, } from '@angular/common/http';
 
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
 import { CharacterDetailComponent } from './pages/characters/character-detail/character-detail.component';
@@ -18,6 +19,10 @@ import { SimplebarAngularModule } from 'simplebar-angular';
 import { BuscadorPipe } from './pipes/buscador.pipe';
 import { FormsModule } from '@angular/forms';
 import { BuscadorHousesPipe } from './pipes/buscador-houses.pipe';
+import {  TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslationComponent } from './shared/components/translation/translation.component';
+
+
 
 
 @NgModule({
@@ -33,15 +38,32 @@ import { BuscadorHousesPipe } from './pipes/buscador-houses.pipe';
     CharacterDetailComponent,
     BuscadorPipe,
     BuscadorHousesPipe,
+    TranslationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SimplebarAngularModule,
-    FormsModule
+    FormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'es',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http:HttpClient) => {
+          return new TranslateHttpLoader(http)
+        },
+        deps: [HttpClient]
+      }
+    
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+/* // required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+} */

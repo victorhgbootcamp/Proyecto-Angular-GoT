@@ -1,9 +1,48 @@
+.house-block{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__item{
+    margin:15px;
+    a{
+      color:white;
+      text-decoration: none;
+    }
+  }
+  &__img{
+    width:248px;
+  }
+}
 
-.gallery-item{
+.scroll{
+  height:100vh;
+
+} 
+
+.container-padre{
+  height: 100vh;
+  display: block;
+  align-items: center;
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  margin-right:40px;
+}
+.container {
+  border-radius: 6px;
+  min-width: 200px;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  //background-color: black;
+}
+
+/* .gallery-item{
     width: 248px;
     height: 297px;
     margin: 10px 24px 10px 20px;
-}
+} */
 
 
 //menu
@@ -64,5 +103,9 @@
   @font-face {
     font-family: Gameofthrones;
     src: url(../../../assets/fonts/GameofThrones.ttf);
+  }
+
+  .scroll{
+    height: 80vh;
   }
 
