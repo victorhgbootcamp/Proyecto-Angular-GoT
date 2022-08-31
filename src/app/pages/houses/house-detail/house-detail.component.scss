@@ -83,3 +83,13 @@
         margin-left: 50px;
     }
   }
+  @media only screen and (max-width: 768px){
+    .icons{
+        justify-content: center;
+       
+        // &__item{
+        //     justify-content: center;
+        // }
+    }
+    
+  }

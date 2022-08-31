@@ -13,7 +13,7 @@ export class CharacterDetailComponent implements OnInit {
   character: any = {}
   options = {autoHide:false};
   imgDefault: Iimage ={src:"https://res.cloudinary.com/djbn99sev/image/upload/v1660982268/House-Tyrell-Main-Shield_iqks98.png", alt:"default"}
-
+  imgDefault2: Iimage ={src:"https://img.freepik.com/fotos-premium/mandarinas-aisladas-mitad-mandarina-pelada-mandarina-entera-o-fruta-naranja-hojas-verdes-aisladas-sobre-fondo-blanco_95544-241.jpg", alt:"default",}
   constructor(private route: ActivatedRoute, 
     private characterDetailService: CharacterDetailService,
     private houseDetailService:HouseDetailService) { }
