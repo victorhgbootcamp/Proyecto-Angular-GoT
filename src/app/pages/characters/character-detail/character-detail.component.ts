@@ -12,6 +12,7 @@ export class CharacterDetailComponent implements OnInit {
   house:any ={}
   character: any = {}
   options = {autoHide:false};
+  imgDefault: Iimage ={src:"https://res.cloudinary.com/djbn99sev/image/upload/v1660982268/House-Tyrell-Main-Shield_iqks98.png", alt:"default"}
 
   constructor(private route: ActivatedRoute, 
     private characterDetailService: CharacterDetailService,
@@ -38,4 +39,7 @@ this.route.paramMap.subscribe(params => {
 
   )}
 }
-
+export interface Iimage{
+  src:string;
+  alt:string;
+}

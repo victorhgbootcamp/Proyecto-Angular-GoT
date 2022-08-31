@@ -1,4 +1,5 @@
-<!--menu iconos-->
+<!--body-->
+
 
 <div class="icons">
   <div class="icons__item">
@@ -10,7 +11,6 @@
     <app-translation></app-translation>
   </div>
 </div>
-
 <!--body-->
 
 <div class="character-details-container">
@@ -19,45 +19,61 @@
     <h2>{{ character.name }}</h2>
   </div>
 
+
+
   <div class="character-details-info">
     <div class="character-details-info__item">
       <h3>{{"CASA" | translate}}</h3>
-      <img src="{{house[0].logoURL}}" alt="{{character.house}}"/>
+      <img *ngIf="house[0]?.logoURL" src="{{house[0]?.logoURL}}" alt="{{character.house}}"/>
+      <img *ngIf="house[0]?.logoURL==undefined" src="{{imgDefault.src}}" alt="{{imgDefault.alt}}"/>
+
     </div>
+
+
+
+
 
     <div class="character-details-info__item">
     <h3>{{"ALIANZAS" | translate}}</h3>
       <p *ngFor="let item of character.allegiances">{{ item }}</p>
-      <!-- <p>{{character.allegiances}}</p> -->
+      <div *ngIf="character[0]?.allegiances"><p>Este personaje no tiene alianza conocida.</p></div>
+      <div *ngIf="character[0]?.allegiances.length==0"><p>Este personaje no tiene alianza conocida.</p></div> 
     </div>
 
     <div class="character-details-info__item">
       <h3>{{"APARICIONES" | translate}}</h3>
       <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.appearances">{{ item }}</p>
-        <!-- <p>{{character.appearances}}</p> -->
+        <div *ngIf="character[0]?.appearances"><p>Este personaje no tiene apariciones conocidas.</p></div>
+        <div *ngIf="character[0]?.appearances.length==0"><p>Este personaje no tiene apariciones conocidas.</p></div> 
       </ngx-simplebar>
     </div>
 
     <div class="character-details-info__item">
       <h3>{{"PADRE" | translate}}</h3>
       <p>{{ character.father }}</p>
+      <div *ngIf="character[0]?.father"><p>Este personaje no tiene padre conocido.</p></div>
+      <div *ngIf="character[0]?.father.length==0"><p>Este personaje no tiene padre conocido.</p></div> 
+      <div *ngIf="character[0]?.father == undefined"><p>Este personaje no tiene padre conocido.</p></div> 
     </div>
 
     <div class="character-details-info__item">
-      <h3>{{"HERMANOS" | translate}}</h3>
+      <h3>{{"DESCENDIENTES" | translate}}</h3>
       <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.siblings">{{ item }}</p>
-        <!-- <p>{{character.appearances}}</p> -->
+        <div *ngIf="character[0]?.siblings"><p>Este personaje no tiene descendientes conocidos.</p></div>
+        <div *ngIf="character[0]?.siblings.length==0"><p>Este personaje no tiene descendientes conocidos.</p></div> 
+        <div *ngIf="character[0]?.siblings == undefined"><p>Este personaje no tiene descendientes conocidos.</p></div> 
       </ngx-simplebar>
-      <!-- <p>{{ character.siblings }}</p> -->
     </div>
 
     <div class="character-details-info__item">
-      <h3>{{"CASA" | translate}}</h3>
+      <h3>TITULOS  </h3>
       <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.titles">{{ item }}</p>
-        <!-- <p>{{character.title}}</p> -->
+        <div *ngIf="character[0]?.titles"><p>Este personaje no tiene titulos conocidos.</p></div>
+        <div *ngIf="character[0]?.titles.length==0"><p>Este personaje no tiene titulos conocidos.</p></div> 
+        <div *ngIf="character[0]?.titles == undefined"><p>Este personaje no tiene titulos conocidos.</p></div>
       </ngx-simplebar>
     </div>
   </div>

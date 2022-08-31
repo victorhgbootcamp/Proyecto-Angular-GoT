@@ -109,6 +109,9 @@ $breakpoint: 200px;
   &__item{
       margin: 10px 10px;
   }
+  @media screen and (max-width: 600px){
+    justify-content:center ;
+  }
 }
 
 //menu
