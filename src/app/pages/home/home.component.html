@@ -1,40 +1,21 @@
 
 <div class="image">
-<app-translation></app-translation>
- <!--    <div class="languages">
-        <div>
-            
-                <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/spain_1_evuqwb.png" alt="">
-            
-        </div>
-        <div class="uk" >
-            
-                <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/united-kingdom_1_dlxqmz.png" alt="">
-                   
-        </div>
-    </div> -->
-    
+<!---iconos-->
+    <div class="languages">
+        <app-translation></app-translation>
+    </div>
 
+<!---titulo-->
 
     <div class="title">
-      <span>GAMES OF THRONES</span> 
+      <div>GAMES OF THRONES</div> 
     </div>
+
+<!---rutas-->
     <div class="routes">
-        <div>
-            <!-- <a class="active" routerLink="/" routerLinkActive="active">Home</a>
-        </div>
-        
-        <div> -->
-            <a class="active" routerLink="/personajes" routerLinkActive="active">{{"PERSONAJES" | translate}}</a>
-        </div>
-        <div>
-            <a class="active" routerLink="/casas" routerLinkActive="active">{{"CASAS" | translate}}</a>
-        </div>
-        <div>
-            <a class="active" routerLink="/cronologia" routerLinkActive="active">{{"CRONOLOGIA" | translate }}</a>
-        </div>
-        
-        
+        <div><a class="active" routerLink="/personajes">{{"PERSONAJES" | translate}}</a></div>
+        <div><a class="active" routerLink="/casas">{{"CASAS" | translate}}</a></div>
+        <div><a class="active" routerLink="/cronologia">{{"CRONOLOGIA" | translate }}</a></div>
     </div>
 
 </div>

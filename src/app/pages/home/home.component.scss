@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    cursor: pointer;
   }
   .active{
     font-family: Gameofthrones;
@@ -48,6 +48,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 19px;
+    cursor: pointer;
  }
  .uk{
     padding-left: 20px;
@@ -64,9 +65,9 @@
       padding: 10px;
     }
     .languages{
-      // left: 50%;
       right: 0%;
       display: flex;
       justify-content: center;
+    cursor: pointer;
     }
   }

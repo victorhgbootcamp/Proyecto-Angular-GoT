@@ -3,12 +3,8 @@
     <div routerLink="/" class="icons__item">
       <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png" alt=""/>
     </div>
-    <div class="icons__item">
-      <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/spain_1_evuqwb.png" alt=""/>
-    </div>
-    <div class="icons__item">
-      <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/united-kingdom_1_dlxqmz.png" alt=""/>
-    </div>
+    <app-translation></app-translation>
+    
 </div>
 
 <!--cronologia-->
@@ -35,11 +31,10 @@
 
 <!--menu-->
 <div class="routes">
-    <div routerLink="/personajes"><p>Personajes</p></div>
-    <div routerLink="/casas"><p>Casas</p></div>
-    <div routerLink="/cronologia"><p routerLinkActive="active">Cronologia</p></div>
-</div> 
-
+    <div routerLink="/personajes"><p>{{"PERSONAJES" | translate}}</p></div>
+    <div routerLink="/casas"><p>{{"CASAS" | translate}}</p></div>
+    <div routerLink="/cronologia"><p routerLinkActive="active">{{"CRONOLOGIA" | translate}}</p></div>
+  </div>
 
 
 

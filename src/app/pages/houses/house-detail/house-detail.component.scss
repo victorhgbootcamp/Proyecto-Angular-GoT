@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: Gameofthrones;
     src: url(../../../shared/assets/fonts/GameofThrones.ttf);
@@ -12,20 +13,33 @@
     align-items: center;
     text-align: center;
     width: 100% !important;
-    height: 1080px;
+    height: 800px;
     
 }
 .gallery{
+
     .gallery-item{
         width: 267px;
         height: 320px;
-        margin: 204px 0px 30px 0px;
+        margin: 0px 0px 30px 0px;
     }
     p{
         font-size: 36px;
         font-family: Gameofthrones;
     }
 }
+.gallery{
+    text-align: center;
+        .gallery-item{
+            width: 267px;
+            height: 320px;
+            margin: 100px 0px 30px 0px;
+        }
+        p{
+            font-size: 36px;
+            font-family: Gameofthrones;
+        }
+    }
 .text-container{
     display: flex;
     flex-wrap: wrap;
@@ -36,22 +50,36 @@
         .c-text-font{
             font-family: Gameofthrones; 
             font-size: 18px;
+            text-align: center;
         }
         div{
+            font-family: Arial, Helvetica, sans-serif;
             justify-content: center;
+            text-align: center;
         }
     }
 }
 
-.languages{
-    top: 0;
-    right: 150px;
-    width: 100%;
+//menu iconos
+.icons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-top: 19px;
-}
-.uk{
-    padding-left: 20px;
-}
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 95%;
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+    align-items: center;
+
+        margin: 10px 10px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 50px;
+    }
+  }

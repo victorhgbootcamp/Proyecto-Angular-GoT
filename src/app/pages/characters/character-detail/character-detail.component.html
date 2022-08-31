@@ -1,4 +1,17 @@
-<app-translation></app-translation>
+<!--menu iconos-->
+
+<div class="icons">
+  <div class="icons__item">
+    <a routerLink="/personajes">Volver</a>
+  </div>
+
+  <div class="icons__item">
+    <div routerLink="/" ><img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png" alt=""/></div>
+    <app-translation></app-translation>
+  </div>
+</div>
+
+<!--body-->
 
 <div class="character-details-container">
   <div class="character-details-card">
@@ -32,7 +45,7 @@
     </div>
 
     <div class="character-details-info__item">
-      <h3>{{"DESCENDIENTES" | translate}}</h3>
+      <h3>{{"HERMANOS" | translate}}</h3>
       <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.siblings">{{ item }}</p>
         <!-- <p>{{character.appearances}}</p> -->
@@ -41,7 +54,7 @@
     </div>
 
     <div class="character-details-info__item">
-      <h3>TITULOS  </h3>
+      <h3>{{"CASA" | translate}}</h3>
       <ngx-simplebar class="scroll-character-details" data-simplebar [options]="options">
         <p *ngFor="let item of character.titles">{{ item }}</p>
         <!-- <p>{{character.title}}</p> -->

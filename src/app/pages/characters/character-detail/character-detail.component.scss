@@ -1,8 +1,21 @@
+
+@font-face {
+    font-family: Gameofthrones;
+    src: url(../../../shared/assets/fonts/GameofThrones.ttf);
+  }
+
 .character-details-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    h2{
+    font-family: Gameofthrones;
+    }
+    h3{
+        font-family: Gameofthrones;
+        }
 }
 .character-details-card{
     display: flex;
@@ -20,8 +33,7 @@
 }
 .character-details-info{
     display:flex;
-    //width: 100%;
-    margin:20px;
+    width: 90%;
     justify-content: center;
     align-items: center;
     &__item{
@@ -32,16 +44,18 @@
         padding:20px;
         flex-wrap: wrap;
         height: 170px;
-        //width: 200px;
+        width: 230px;
         img{
             width:160px;
             text-align: center;
+            margin-left: 20px;
         }
         h3{
-            margin:0px 10px 0px 10px;
+            margin:0px 10px 10px 10px;
         }
         p{
             text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
     h3{
@@ -66,59 +80,31 @@
     text-align: center;
     box-sizing: content-box;
     height:100px;
+    width: 230px;
+    margin: 0px 0px 0px 10px;
+    justify-content: flex-start;
 }
 
-/* 
-.padre{
-    //background-color: black;
-    color: white;
+//menu iconos
+.icons{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Gameofthrones;
-    font-size: 32px;
-    
-img {
-    width: 248px;
-    height: 340px;
-}
-}
-.main{
-    display: flex;
-    //width: 100%;
     flex-wrap: wrap;
-    margin:20px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    span{
-        font-family: Gameofthrones;
-    }
+    cursor: pointer;
+    width: 95%;
     &__item{
-        margin:15px;
-        display:block;
-        height:100px;
-        width: 150px;
-        padding:20px;
-        
+        display: flex;
+        flex-wrap: wrap;
+    align-items: center;
+
+        margin: 10px 10px;
     }
-}
-
- */
-
-/* div{
-    display: flex;
-    flex-direction: column;
-    width: 248px;
-} */
-/* @font-face {
-    font-family: Gameofthrones;
-    src: url(../../../../assets/fonts/GameofThrones.ttf);
-} */
+    a{
+        color: white;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 50px;
+    }
+  }

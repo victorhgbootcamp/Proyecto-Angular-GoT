@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HouseDetailComponent implements OnInit {
 
 house: any = {}
+imgDefault: Iimage ={src:"https://res.cloudinary.com/djbn99sev/image/upload/v1660982268/House-Tyrell-Main-Shield_iqks98.png", alt:"default"}
+
 
   constructor(private route: ActivatedRoute, private houseDetailService: HouseDetailService) { }
 
@@ -23,4 +25,8 @@ house: any = {}
     })
       } 
 
+}
+export interface Iimage{
+  src:string;
+  alt:string;
 }

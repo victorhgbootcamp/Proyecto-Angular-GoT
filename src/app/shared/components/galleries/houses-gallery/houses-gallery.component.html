@@ -1,36 +1,18 @@
-<div>
 <div class="nav-block">
+
   <div class="input-block">
-    <input
-      type="text"
-      name="filterHouse"
-      placeholder="Buscar..."
-      [(ngModel)]="filterHouse"
-    />
+    <input type="text" name="filterHouse" placeholder="Buscar..." [(ngModel)]="filterHouse"/>
   </div>
-  <app-translation></app-translation>
-  <!-- <div class="icons">
+  
+  <div class="icons">
     <div routerLink="/" class="icons__item">
-      <img
-        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png"
-        alt=""
-      />
+      <img src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661780537/Proyecto%20GoT/Group_qx0xwb.png" alt=""/>
     </div>
-    <div class="icons__item">
-      <img
-        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/spain_1_evuqwb.png"
-        alt=""
-      />
-    </div>
-    <div class="icons__item">
-      <img
-        src="https://res.cloudinary.com/dfgzfxscq/image/upload/v1661527883/Proyecto%20GoT/united-kingdom_1_dlxqmz.png"
-        alt=""
-      />
-    </div>
-  </div> -->
+    <app-translation></app-translation>
+  </div>
 </div>
-</div>
+
+
 <div class="container-padre">
 <div class="container">
   <ngx-simplebar class="scroll" data-simplebar [options]="options">
@@ -66,17 +48,8 @@
 
 <!--menu-->
 <div class="routes">
-  <div>
-    <a class="active" routerLink="/personajes" routerLinkActive="active"
-      >{{"PERSONAJES" | translate}}</a
-    >
-  </div>
-  <div>
-    <a class="active" routerLink="/casas" routerLinkActive="active">{{"CASAS" | translate}}</a>
-  </div>
-  <div>
-    <a class="active" routerLink="/cronologia" routerLinkActive="active"
-      >{{"CRONOLOGIA" | translate}}</a
-    >
-  </div>
+  <div routerLink="/personajes"><p>{{"PERSONAJES" | translate}}</p></div>
+  <div routerLink="/casas"><p routerLinkActive="active">{{"CASAS" | translate}}</p></div>
+  <div routerLink="/cronologia"><p>{{"CRONOLOGIA" | translate}}</p></div>
 </div>
+

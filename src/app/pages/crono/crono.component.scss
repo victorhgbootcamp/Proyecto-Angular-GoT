@@ -11,6 +11,10 @@ $breakpoint: 200px;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  cursor: pointer;
+  button{
+  cursor: pointer;
+  }
 }
 .button{
   background-color: black;
@@ -24,6 +28,8 @@ $breakpoint: 200px;
   position: relative;
   margin: 0 auto;
   max-width: 800px;
+  padding-bottom: 170px;
+
   &:before {
     content: '';
     position: absolute;
@@ -31,6 +37,8 @@ $breakpoint: 200px;
     border: 2px solid white;
     right: 40px;
     top: 0;
+  padding-bottom: 250px;
+
   }
   &:after {
     content: "";
@@ -97,6 +105,7 @@ $breakpoint: 200px;
   flex-wrap: wrap;
   justify-content: right;
   width: 95%;
+  cursor: pointer;
   &__item{
       margin: 10px 10px;
   }
@@ -108,7 +117,7 @@ $breakpoint: 200px;
   position:fixed;
   bottom: 0;
   width: 100%;
-  padding: 50px;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -118,6 +127,7 @@ $breakpoint: 200px;
     color: white;
     font-size: 36px;
     text-decoration:solid;
+    cursor: pointer;
   }
   & .active{
     text-decoration: underline;
@@ -129,6 +139,7 @@ $breakpoint: 200px;
   }
     p{
     font-size: 20px;
+    cursor: pointer;
     } 
   }
 }
@@ -141,7 +152,7 @@ $breakpoint: 200px;
   margin: 10px 50px 0px 0px;
   height: 89vh;
   @media screen and (max-width: 600px){
-    height: 75vh;
+    height: 80vh;
     margin: 10px 15px 0px 0px;
 
   }
